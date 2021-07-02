@@ -1,14 +1,28 @@
 {
-  //   "manifest_version": 2,
-  //   "name": "My first Chrome Extension",
-  //   "description": "Chrome extension workshop for Le Wagon Tokyo",
-  //   "author": "Your name",
-  //   "version": "1",
-  //   "permissions": ["tabs"],
-  //   "icons": {
-  //     "16": "images/icon16.png",
-  //     "32": "images/icon32.png",
-  //     "48": "images/icon48.png",
-  //     "128": "images/icon128.png"
-  //   }
+    "manifest_version": 2,
+    "name": "Pandify",
+    "description": "First Chrome extension",
+    "author": "Ryu_Desire",
+    "version": "2.0",
+    "permissions": ["tabs"],
+    "icons": {
+      "16": "./images/panda16-32.png",
+      "32": "./images/panda16-32.png",
+      "48": "./images/panda48.png",
+      "128": "./images/panda128.png"
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "Pandify"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["scripts/pandify.js"]
+      }
+    ]
+  
 }
